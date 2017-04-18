@@ -1,0 +1,19 @@
+<div class="well" ng-repeat="show in controller.shows">
+  <h3>{{show.title}}</h3>
+  <table class="table table-striped">
+    <tr>
+      <th>Name</th>
+      <th>Actor</th>
+      <th>Age</th>
+      <th>Rating</th>
+      <th>On Set</th>
+    </tr>
+    <tr ng-repeat="character in show.characters">
+      <td>{{character.name}}</td>
+      <td>{{character.actor}}</td>
+      <td>{{character.age}}</td>
+      <td>{{character.rating}}</td>
+      <td><input type="checkbox" ng-checked="character.onSet" disabled readonly /></td>
+    </tr>
+  </table>
+</div>
